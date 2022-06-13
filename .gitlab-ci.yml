@@ -10,7 +10,7 @@ build-job:
         - docker  
     stage: build
     script:
-        - npm build
+        - npm run build
     artifacts:
         paths:
             - build/
