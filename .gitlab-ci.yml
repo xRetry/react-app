@@ -1,0 +1,25 @@
+image: node:latest
+
+stages:
+    - build
+    - test
+    - deploy
+
+build-job:       
+    stage: build
+    script:
+        - npm build
+    artifacts:
+        paths:
+            - build/
+
+test-job:
+    stage: test
+    script:
+        - ls
+    
+deploy-job:
+    stage: deploy
+    script:
+        - echo "Deploying application..."
+        - echo "Application successfully deployed."
