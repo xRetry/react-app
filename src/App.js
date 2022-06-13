@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from 'react'
+import Header from './components/Header'
+import TextElement from './components/TextElement'
 
 function App() {
+  const [text, setText] = useState('');
+
+  const onClick = () => {
+    setText('test text')
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Header onClick={onClick}/>
+      <TextElement text={text}/>
     </div>
   );
 }
