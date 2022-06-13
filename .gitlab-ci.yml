@@ -5,7 +5,9 @@ stages:
     - test
     - deploy
 
-build-job:       
+build-job:    
+    tags: 
+        - windows   
     stage: build
     script:
         - npm build
@@ -14,11 +16,15 @@ build-job:
             - build/
 
 test-job:
+    tags:
+        - windows
     stage: test
     script:
         - ls
     
 deploy-job:
+    tags:
+        - windows
     stage: deploy
     script:
         - echo "Deploying application..."
