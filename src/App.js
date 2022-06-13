@@ -6,7 +6,12 @@ function App() {
   const [text, setText] = useState('');
 
   const onClick = () => {
-    setText('test text')
+    const fetchTexts = async () => {
+      const res = await fetch('http://localhost:5000/texts')
+      const data = await res.json()
+      setText(data[0].value)
+    }
+    fetchTexts()
   }
 
   return (
