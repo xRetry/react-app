@@ -7,7 +7,7 @@ stages:
 
 build-job:    
     tags: 
-        - windows   
+        - docker  
     stage: build
     script:
         - npm build
@@ -17,14 +17,14 @@ build-job:
 
 test-job:
     tags:
-        - windows
+        - docker
     stage: test
     script:
         - ls
     
 deploy-job:
     tags:
-        - windows
+        - docker
     stage: deploy
     script:
         - echo "Deploying application..."
