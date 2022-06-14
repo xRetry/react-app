@@ -7,9 +7,8 @@ function App() {
 
   const onClick = () => {
     const fetchTexts = async () => {
-      const res = await fetch('http://localhost:5000/texts')
-      const data = await res.json()
-      setText(data[0].value)
+      // No backend configured
+      setText('in the gobberwarts')
     }
     fetchTexts()
   }
