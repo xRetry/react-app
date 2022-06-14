@@ -40,4 +40,4 @@ jobs:
           app-name: 'react-app-123'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4F29AFB6D4BF4B1797AFCB220BB87728 }}
-          package: .
+          package: 'build'
